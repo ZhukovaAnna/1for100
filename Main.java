@@ -1,15 +1,16 @@
 public class Main {
     public static void main(String[] args) {
 
-        for (int i = 0; i < args.length; i++)
-        {
+        for (int i = 0; i < args.length; i++) {
             double payment = Double.parseDouble(args[i]);
             double bonus = 0;
-            if (payment >=1000)
-            {
-                bonus = 100;
+            double total = 0;
+            double deposit = 100;
+            if (payment >= 1000) {
+                bonus = payment * 0.01;
             }
-            System.out.print("Payment " + payment + " bonus = " + bonus + "\n");
+            total = deposit + payment + bonus;
+            System.out.print("Payment " + payment + " bonus = " + bonus + " total = " + total + "\n");
         }
 
 
